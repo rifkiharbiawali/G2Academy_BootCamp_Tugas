@@ -23,7 +23,22 @@ class Register extends Component {
 
   register = () => {
     const { email, password } = this.state;
-    this.props.firebase.register();
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then((respon) => {
+        console.log(respon);
+      })
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ...
+      });
+
+    // const { email, password } = this.state;
+    // this.props.firebase.register();
   };
   render() {
     return (

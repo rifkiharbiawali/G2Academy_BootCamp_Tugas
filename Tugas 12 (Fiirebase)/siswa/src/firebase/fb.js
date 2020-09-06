@@ -10,17 +10,17 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
 };
 
-register = (email, password) => {
-  return firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .catch(function (error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-    });
-};
+// register = (email, password) => {
+//   return firebase
+//     .auth()
+//     .createUserWithEmailAndPassword(email, password)
+//     .catch(function (error) {
+//       // Handle Errors here.
+//       var errorCode = error.code;
+//       var errorMessage = error.message;
+//       // ...
+//     });
+// };
 
 firebase.initializeApp(firebaseConfig);
 export default firebase;
