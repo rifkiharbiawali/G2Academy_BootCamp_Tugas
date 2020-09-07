@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Button, Form } from "react-bootstrap";
 import firebase from "../../firebase";
 import "./register.css";
+import { connect } from "react-redux";
 
 class Register extends Component {
   state = {
@@ -113,7 +114,7 @@ class Register extends Component {
 
             <center>
               <Button variant="primary" type="button" onClick={this.register}>
-                Register
+                Register{this.props.loginState}
               </Button>
             </center>
           </Form>
@@ -123,4 +124,7 @@ class Register extends Component {
   }
 }
 
-export default Register;
+const reduxState = (state) => ({
+  loginState: state.isLogin,
+});
+export default connect(reduxState, null)(Register);
