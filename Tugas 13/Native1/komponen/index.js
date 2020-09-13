@@ -78,6 +78,9 @@ class Komponen extends Component {
             accessibilityLabel="Learn more about this purple button"
             onPress={this.login}
           />
+
+          <Text>Email:rifki@gmail.com</Text>
+          <Text>Password:123</Text>
         </View>
       );
     } else {
