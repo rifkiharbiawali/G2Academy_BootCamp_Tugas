@@ -7,7 +7,7 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
-import Tombol from '../button';
+import Tombol from './button';
 
 export default class ListItem extends Component {
   constructor(props) {

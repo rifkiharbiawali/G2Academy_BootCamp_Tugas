@@ -24,6 +24,8 @@ import React, {Component} from 'react';
 //   ReloadInstructions,
 // } from 'react-native/Libraries/NewAppScreen';
 import ListItem from './komponen/lisItem';
+// import Login from './komponen/login';
+import Menu from './komponen/menu';
 // import Tombol from './komponen/button';
 // import {View} from 'react-native';
 
@@ -32,17 +34,20 @@ class App extends Component {
     super(props);
     this.state = {};
   }
-  next = () => {
-    let array = this.state.urlFetch;
-    for (let i = 0; i < array.length; i++) {
-      const element = array[i];
-    }
-  };
+  // next = () => {
+  //   let array = this.state.urlFetch;
+  //   for (let i = 0; i < array.length; i++) {
+  //     const element = array[i];
+  //   }
+  // };
 
   render() {
     return (
       <>
+        {/* <Login />*/}
+        {/* <Menu /> */}
         <ListItem url={this.state.urlFetch} />
+
         {/* <View
           style={{
             display: 'flex',
